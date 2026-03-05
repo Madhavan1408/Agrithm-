@@ -26,12 +26,15 @@
 
 ## Location Based
 import feedparser
+from urllib.parse import quote
 
 def get_local_agri_news(city):
 
     query = f"agriculture OR farming OR crop {city}"
 
-    url = f"https://news.google.com/rss/search?q={query}&hl=en-IN&gl=IN&ceid=IN:en"
+    encoded_query = quote(query)
+
+    url = f"https://news.google.com/rss/search?q={encoded_query}&hl=en-IN&gl=IN&ceid=IN:en"
 
     feed = feedparser.parse(url)
 
