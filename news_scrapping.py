@@ -22,4 +22,4 @@ def prepare_news_summary(news):
     return combined
 
 
-print(prepare_news_summary())
+print(prepare_news_summary(news))
