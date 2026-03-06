@@ -5,8 +5,16 @@ from community_reports import generate_community_alert
 from voice import generate_voice
 from logger import write_log
 from twilio.twiml.voice_response import VoiceResponse, Gather
+from news_router import router as news_router   # ← Farmer News Scraper API
 
-app = FastAPI()
+app = FastAPI(
+    title="AI Farmer Advisory",
+    description="Voice + Advisory + News API for farmers",
+    version="1.0.0"
+)
+
+# Register news scraper API
+app.include_router(news_router)
 
 
 @app.get("/farmer-advisory")
