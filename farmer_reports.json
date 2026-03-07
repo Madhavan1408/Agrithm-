@@ -112,5 +112,11 @@
         "issue": "brown spots on leaves",
         "location": "Ongole",
         "timestamp": "2026-03-07 22:21:15.113022"
+    },
+    {
+        "crop": "rice",
+        "issue": "brown spots on leaves",
+        "location": "Ongole",
+        "timestamp": "2026-03-07 22:29:44.341856"
     }
 ]
