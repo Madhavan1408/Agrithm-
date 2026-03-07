@@ -1,5 +1,5 @@
 from fastapi import FastAPI, Request
-from weather import get_weather
+
 from news_scrapping import get_local_agri_news
 from community_reports import generate_community_alert
 from voice import generate_voice

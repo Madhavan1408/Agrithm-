@@ -1,2 +1,3 @@
-/ngrok.exe
-/.env
+ngrok.exe
+.env
+logger.py
