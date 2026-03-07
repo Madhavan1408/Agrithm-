@@ -1,6 +1,5 @@
 from fastapi import FastAPI, Request
-from fastapi.middleware.cors import CORSMiddleware
-from fastapi.staticfiles import StaticFiles
+from weather import get_weather
 from news_scrapping import get_local_agri_news
 from community_reports import generate_community_alert
 from voice import generate_voice
@@ -13,16 +12,8 @@ from news_scrapper_api.news_api import get_farmer_news
 
 app = FastAPI(
     title="AI Farmer Advisory",
-    description="Voice + Advisory + News + Gemini Flash AI for farmers",
-    version="2.0.0"
-)
-
-# ── CORS — allow HTML docs page to call the API from browser ──────────────────
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["*"],
-    allow_methods=["*"],
-    allow_headers=["*"],
+    description="Voice + Advisory + News API for farmers",
+    version="1.0.0"
 )
 
 # Register routers
